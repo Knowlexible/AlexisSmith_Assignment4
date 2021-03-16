@@ -52,3 +52,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+$route['api/demo'] = 'apitest/ApiDemoController/index';
+// $route['api/project'] = 'apitest/ApiDemoController/index';
+//$route['api/project'] = 'api-v2/ApiProjectsController/projects';
+$route['api-v2/projects'] = 'api-v2/ApiProjectsController/index';
+$route['api-v2/project/(:any)'] = 'api-v2/ApiProjectsController/project/$1';
+$route['api-v2/project/create'] = 'api-v2/ApiProjectsController/index';
+//$route['api-v2/project/edit/(:any)'] = 'api-v2/ApiProjectsController/getProjects/$1';
+$route['api-v2/project/update/(:any)'] = 'api-v2/ApiProjectsController/editProjects/$1';
+$route['api-v2/project/delete/(:any)'] = 'api-v2/ApiProjectsController/deleteProject/$1';
